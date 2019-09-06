@@ -21,7 +21,7 @@ for info in infotype:#for chunk in reader:
                 finalInfo = pd.concat([finalInfo, filteredInfo])
                 finalGeno = pd.concat([finalGeno, filteredGeno])
 
-finalInfo.to_csv(r'/gpfs/data/huo-lab/BCAC/DataCombined/BCAC/BCAC_Info7MAF005_Chr22Info.csv', header = 0, index = None, sep = ' ') #only works if final is not None
-finalGeno.to_csv(r'/gpfs/data/huo-lab/BCAC/DataCombined/BCAC/BCAC_Info7MAF005_Chr22Geno.csv', header = None, index = None, sep = ' ')
+finalInfo.to_csv(r'/gpfs/data/huo-lab/BCAC/DataCombined/BCAC/BCAC_Info7MAF005_Chr22Info.csv', header = 0, index = None, sep = ' ', compression = 'gzip') #only works if final is not None
+finalGeno.to_csv(r'/gpfs/data/huo-lab/BCAC/DataCombined/BCAC/BCAC_Info7MAF005_Chr22Geno.csv', header = None, index = None, sep = ' ', compression = 'gzip')
 
 #Remember, a few hours of trial and error could save you several minutes of looking at the documentation.
